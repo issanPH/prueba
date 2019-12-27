@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Despertador</string>
+    <string name="action_settings">Settings</string>
+    <string name='inicio_alarma'> Agregar </string>
+    <string name='inicio2_alarma'> ON </string>
+    <string name='fin_alarma'> OFF </string>
+    <string name='alarma'> lista</string>
+    <string name='estado_alarma'> Estado</string>
+
+    <string-array name="tonos_array">
+        <item>Elige un tono </item>
+        <item>Polaris Boku no hero</item>
+        <item>Sora ni Utaeba Boku no hero</item>
+        <item>Padoru padoru</item>
+        <item>True Sincerely Violet Evergarden</item>
+    </string-array>
+
+</resources>
