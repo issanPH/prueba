@@ -176,6 +176,26 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
 
+        Button btnActualizar = findViewById(R.id.btnActualizar);
+
+        btnActualizar.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
+            @Override
+            public void onClick(View v) {
+                Relog re =(Relog) getIntent().getSerializableExtra("relog");
+
+                re.setHora(alarm_tp.getHour());
+                re.setMinutos(alarm_tp.getMinute());
+                re.setAMPM(getAMPMValue);
+
+                if(relogDAL.actualizar(re)) {
+                    Toast.makeText(getApplicationContext(), "Actualizado!", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "NO Actualizado!", Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
 
 
 

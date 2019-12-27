@@ -103,8 +103,11 @@ public class AlarmsActivity extends AppCompatActivity {
     private void abrirActivity() {
         Intent intento = new Intent(AlarmsActivity.this, MainActivity.class);
 
+        intento.putExtra("relog",relogList.get(codPosicion));
+
         startActivityForResult(intento, 100);
     }
+
 
     private void actualizarLista() {
         adapter.clear();
